@@ -27,7 +27,7 @@ def print_dictionary(**dictionary):
         print ("{}: {}".format(key, dictionary[key]))
 
 
-def count_each_ip(text):
+def count_ip_appearance(text):
     myregex = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
     ip_list = re.findall(myregex, text)
 
@@ -83,7 +83,7 @@ lines = text.split("\n")
 # filtered_lines = delete_empty_lines(lines)
 
 n = 3
-ip_count = count_each_ip(text)
+ip_count = count_ip_appearance(text)
 sorted_by_frequencyIp = sort_by_value(**ip_count)
 print ("Top ip {} by frequency(ip:freq): ")
 print_list_top_n(sorted_by_frequencyIp, n)
