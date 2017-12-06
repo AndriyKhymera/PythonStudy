@@ -1,6 +1,5 @@
 import sys
 
-
 def decorator(func):
     def warappr(*args,**kwargs):
         print (args)
