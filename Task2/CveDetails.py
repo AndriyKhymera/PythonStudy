@@ -8,6 +8,7 @@ class CVEDetails(object):
     Gained_Access = ""
     Vulnerability_type = ""
     CWE_ID = ""
+    Vendor = ""
 
     def __init__(self, dictionary):
         if "CVSS_Score" in dictionary:
@@ -28,18 +29,21 @@ class CVEDetails(object):
             self.Vulnerability_type = dictionary["Vulnerability_type"]
         if "CWE_ID" in dictionary:
             self.CWE_ID = dictionary["CWE_ID"]
+        if "Vendor" in dictionary:
+            self.Vendor = dictionary["Vendor"]
 
     def __str__(self):
         return format("""
-        CWE ID:{} ,
-        CVSS Score: {}
-        Confidentiality_Impact: {}
-        Integrity_Impact: {}
-        Availability_Impact: {}
-        Access_Complexity: {}
-        Authentication: {}
-        Gained_Access: {}
-        Vulnerability_type: {}""".format(self.CWE_ID, self.CVSS_Score, self.Confidentiality_Impact
-                                                      , self.Integrity_Impact, self.Availability_Impact,
-                                                      self.Access_Complexity, self.Authentication,
-                                                      self.Gained_Access, self.Vulnerability_type))
+    CWE ID:{} ,
+    CVSS Score: {}
+    Confidentiality_Impact: {}
+    Integrity_Impact: {}
+    Availability_Impact: {}
+    Access_Complexity: {}
+    Authentication: {}
+    Gained_Access: {}
+    Vulnerability_type: {}
+    Vendor: {}""".format(self.CWE_ID, self.CVSS_Score, self.Confidentiality_Impact
+                         , self.Integrity_Impact, self.Availability_Impact,
+                         self.Access_Complexity, self.Authentication, self.Gained_Access, self.Vulnerability_type,
+                         self.Vendor))
