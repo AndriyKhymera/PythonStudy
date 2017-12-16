@@ -9,7 +9,7 @@ def read_value():
 
 def loop_input():
     con = "y"
-    file = open("userInput.txt", "r+")
+    file = open("3_lectrure_userInput.txt", "r+")
     print (file.read())
 
     while con != "n":
