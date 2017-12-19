@@ -17,7 +17,7 @@ print (os.getcwd())
 print (os.curdir)
 print (str(os.listdir(os.curdir)))
 
-path = '/home/andrii/PycharmProjects/PythonStudy/Task4'
+path = '/home/andrii/PycharmProjects/PythonStudy/Task4_web_server'
 os.chdir(path)
 print (os.getcwd())
 
