@@ -6,7 +6,6 @@ import mechanicalsoup
 
 ACCOUNT_AMOUNT_TO_GET = 100
 
-
 def getCmdArguments():
     return sys.argv[1:]
 
