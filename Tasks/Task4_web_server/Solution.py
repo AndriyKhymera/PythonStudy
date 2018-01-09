@@ -42,10 +42,9 @@ def getResponse(request):
         try:
             if (not os.path.exists(newPath)):
                 return "HTTP/1.1 200 OK"
-            file = open(newPath, 'r')
-            content = file.read()
-            http_response = '\nHTTP/1.1 200 OK\n\n{}'.format(content)
-            file.close()
+            with open(newPath, 'r') as file:
+                content = file.read()
+                http_response = '\nHTTP/1.1 200 OK\n\n{}'.format(content)
         except (Exception):
             pass
 
